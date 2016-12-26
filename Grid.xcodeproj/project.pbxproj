@@ -12,6 +12,10 @@
 		8103C4D81E0E82D2004C631D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8103C4D61E0E82D2004C631D /* Main.storyboard */; };
 		8103C4DA1E0E82D2004C631D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8103C4D91E0E82D2004C631D /* Assets.xcassets */; };
 		8103C4DD1E0E82D2004C631D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8103C4DB1E0E82D2004C631D /* LaunchScreen.storyboard */; };
+		8103C4E51E0E837E004C631D /* GridCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103C4E41E0E837E004C631D /* GridCollectionViewLayout.swift */; };
+		8103C4E71E0FD082004C631D /* GridColumnHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8103C4E61E0FD082004C631D /* GridColumnHeaderCell.xib */; };
+		8103C4E91E0FD0FA004C631D /* GridRowHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8103C4E81E0FD0FA004C631D /* GridRowHeaderCell.xib */; };
+		8103C4EB1E0FD126004C631D /* GridItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8103C4EA1E0FD126004C631D /* GridItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		8103C4D91E0E82D2004C631D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8103C4DC1E0E82D2004C631D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8103C4DE1E0E82D2004C631D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8103C4E41E0E837E004C631D /* GridCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCollectionViewLayout.swift; sourceTree = "<group>"; };
+		8103C4E61E0FD082004C631D /* GridColumnHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridColumnHeaderCell.xib; sourceTree = "<group>"; };
+		8103C4E81E0FD0FA004C631D /* GridRowHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridRowHeaderCell.xib; sourceTree = "<group>"; };
+		8103C4EA1E0FD126004C631D /* GridItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GridItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				8103C4D91E0E82D2004C631D /* Assets.xcassets */,
 				8103C4DB1E0E82D2004C631D /* LaunchScreen.storyboard */,
 				8103C4DE1E0E82D2004C631D /* Info.plist */,
+				8103C4E41E0E837E004C631D /* GridCollectionViewLayout.swift */,
+				8103C4E61E0FD082004C631D /* GridColumnHeaderCell.xib */,
+				8103C4E81E0FD0FA004C631D /* GridRowHeaderCell.xib */,
+				8103C4EA1E0FD126004C631D /* GridItemCell.xib */,
 			);
 			path = Grid;
 			sourceTree = "<group>";
@@ -124,6 +136,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8103C4E71E0FD082004C631D /* GridColumnHeaderCell.xib in Resources */,
+				8103C4E91E0FD0FA004C631D /* GridRowHeaderCell.xib in Resources */,
+				8103C4EB1E0FD126004C631D /* GridItemCell.xib in Resources */,
 				8103C4DD1E0E82D2004C631D /* LaunchScreen.storyboard in Resources */,
 				8103C4DA1E0E82D2004C631D /* Assets.xcassets in Resources */,
 				8103C4D81E0E82D2004C631D /* Main.storyboard in Resources */,
@@ -138,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8103C4D51E0E82D2004C631D /* ViewController.swift in Sources */,
+				8103C4E51E0E837E004C631D /* GridCollectionViewLayout.swift in Sources */,
 				8103C4D31E0E82D2004C631D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
