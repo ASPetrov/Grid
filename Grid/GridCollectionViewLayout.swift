@@ -693,6 +693,10 @@ class SwappingCollectionView: UICollectionView {
     
     static let distanceDelta:CGFloat = 2 // adjust as needed
     
+    deinit {
+        invalidateScrollToItemTimer()
+    }
+    
     override func beginInteractiveMovementForItem(at indexPath: IndexPath) -> Bool {
         guard self.dataSource?.collectionView?(self, canMoveItemAt: indexPath) == true else { return false }
         
@@ -737,7 +741,10 @@ class SwappingCollectionView: UICollectionView {
                                                          to: destIndexPath)
                         self.interactiveIndexPath = destIndexPath
                         
+                        self.setupScrollToItemTimer()
                     })
+                } else {
+                    invalidateScrollToItemTimer()
                 }
             }
         }
@@ -763,6 +770,8 @@ class SwappingCollectionView: UICollectionView {
         self.interactiveIndexPath = nil
         self.previousPoint = nil
         self.swapSet.removeAll()
+        
+        invalidateScrollToItemTimer()
     }
     
     private func shouldSwap(newPoint: CGPoint) -> Bool {
@@ -773,4 +782,32 @@ class SwappingCollectionView: UICollectionView {
         
         return false
     }
+    
+    //MARK: - Timer
+    
+    private var scrollToItemTimer: Timer?
+    
+    private func invalidateScrollToItemTimer() {
+        scrollToItemTimer?.invalidate()
+        scrollToItemTimer = nil
+    }
+    
+    private func setupScrollToItemTimer() {
+        invalidateScrollToItemTimer()
+        
+        scrollToItemTimer = Timer.scheduledTimer(timeInterval: 0.2,
+                                                 target: self,
+                                                 selector: #selector(handleScroll),
+                                                 userInfo: nil,
+                                                 repeats: true)
+    }
+    
+    @objc private func handleScroll() {
+        if let indexPath = interactiveIndexPath {
+            self.scrollToItem(at: indexPath,
+                              at: .centeredHorizontally,
+                              animated: true)
+        }
+    }
+    
 }
